@@ -1,0 +1,84 @@
+1. Inicio
+2. Funcion principal ()
+3. 	nombres (4), x (300)[{A-Z}, {a-z}] <-- {"Jose", "Luis", "Maria", "Ana"}
+4.	notas (4)(4), i [0-n] <--  {{9, 10, 8, 7}, 
+				   {3, 10, 6, 5},
+				   {7, 8, 10, 9},
+	                           {10, 9, 8, 6}}
+5. 	suma, i [0-n] <-- 0
+6. 	fila, i [0-n]
+7. 	columna, i [0-n]
+8.	promedio, d [0-n] <-- 0	
+ 	
+9.	<< "Reporte de Notas del Paralelo" + "\n"
+10.      Para (fila <-- 0, fila < 4, 1) haga
+11. 		Para (columna <-- 0, columna < 4, 1) haga		
+12. 			suma <-- obtenerSuma (notas [fila][0], notas [fila][1], notas [fila][2], notas [fila][3])
+13. 			promedio <-- obtenerPromedio (suma)
+			
+14.			<< obtenerMensaje (promedio, nombres [fila], notas [fila][0], 
+					   notas [fila][1], notas [fila][2], notas [fila][3])
+15. 	Fin para
+
+16.	obtenerReporteFinal(notas)
+
+17.Fin funcion principal ()
+
+18.Funcion obtenerSuma (a, i; b, i; c, i; d, i):i				
+19.	suma, i [0-n]
+20.	suma <-- a + b + c + d
+21. 	retornar suma
+22.Fin funcion obtenerSuma
+
+23.Funcion obtenerPromedio (suma, i):d
+24.	promedio, d [0-n]
+25.	promedio <-- suma/4
+26.	retornar promedio
+27.Fin funcion obtenerPromedio
+
+28.Funcion obtenerMensaje (promedio, d; nombre, x; a, i; b, i; c, i; d, i)
+29.	<< "Notas de " + nombre + ":" + "\n"
+		    + a + "\n" + b + "\n" + c + "\n" 
+		    + d + "\n" + "Promedio de notas " + promedio + "\n"
+30.Fin funcion obtenerMensaje 
+
+31 Funcion obtenerReporteFinal(notas (4)(4), i)
+32.	suma, i [0-n] <-- 0
+33. 	fila, i [0-n]
+34. 	columna, i [0-n]
+35.	promedio, d [0-n] <-- 0	
+36.      Para (fila <-- 0, fila < 4,  1) haga
+37. 		Para (columna <-- 0, columna < 4, 1) haga
+38. 			Si (fila == columna)		
+39. 				Si (fila < 4 AND columna == 0) entonces
+40.					promedio <-- (notas [0][columna] + notas [1][columna] +
+41.						     notas [2][columna] + notas [3][columna])/4					
+42.					<< "Promedio de notas Programación: " + promedio + "\n"				
+43.				De lo contrario
+44. 					Si (fila < 4 AND columna == 1) entonces
+45.						promedio <-- (notas [0][columna] + notas [1][columna] +
+46.						     	notas [2][columna] + notas [3][columna])/4					
+47.						<< "Promedio de notas Matemáticas:" + promedio + "\n"				
+48.					De lo contrario
+49.						Si (fila < 4 AND columna == 2) entonces
+50.						promedio <-- (notas [0][columna] + notas [1][columna] +
+51.						     	notas [2][columna] + notas [3][columna])/4					
+52.						<< "Promedio de notas Base de Datos: " + promedio + "\n"				
+53.						De lo contrario	
+54. 							Si (fila < 4 AND columna == 3) entonces
+55.								promedio <-- (notas [0][columna] + notas [1][columna] +
+56.						     			notas [2][columna] + notas [3][columna])/4					
+57.								<< "Promedio de notas Estructuras de Datos: " + promedio + "\n"				
+58.							Fin si
+59.						Fin si
+60.					Fin si
+61.				Fin si
+62.			Fin si
+63.		Fin Para		
+64. 	Fin para
+65.Fin funcion obtenerReporteFinal
+66.Fin
+
+
+
+
