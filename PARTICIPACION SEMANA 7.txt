@@ -17,7 +17,7 @@
 13. 			promedio <-- obtenerPromedio (suma)
 			
 14.			<< obtenerMensaje (promedio, nombres [fila], notas [fila][0], 
-					   notas [fila][1], notas [fila][2], notas [fila][3])
+		Fin Para		   notas [fila][1], notas [fila][2], notas [fila][3])
 15. 	Fin para
 
 16.	obtenerReporteFinal(notas)
